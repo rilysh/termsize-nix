@@ -1,0 +1,15 @@
+** termsize-nix
+Get the current size of a terminal on GNU/Linux.
+
+** Usage
+#+begin_src rust
+  use termsize_nix;
+  
+  fn main() {
+      let mut term_size = Termsize::new();
+      term_size.get();
+
+      println!("Rows: {}, Columns:", term_size.row,
+	       term_size.column);
+  }
+#+end_src
